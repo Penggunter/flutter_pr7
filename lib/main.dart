@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pr7/presentation/homePage.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 241, 222, 14)),
+        useMaterial3: true,
       ),
+      
+      home: HomePage()
     );
   }
 }
