@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pr7/presentation/homePage.dart';
+import 'package:flutter_pr7/presentation/ChatPage.dart';
 
 void main() {
   runApp(MainApp());
@@ -17,7 +17,7 @@ class MainApp extends StatelessWidget {
         useMaterial3: true,
       ),
       
-      home: HomePage()
+      home: ChatScreen(),
     );
   }
 }
