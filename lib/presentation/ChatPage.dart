@@ -13,7 +13,7 @@ class _ChatScreenState extends State<ChatScreen> {
     setState(() {
       isLoading = true;
     });
-    await Future.delayed(Duration(seconds: 2)); // Эмуляция загрузки
+    await Future.delayed(Duration(seconds: 2));
     setState(() {
       messages = ['Hello!', 'How are you?', 'This is an async message.'];
       isLoading = false;
@@ -21,7 +21,7 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
   Future<void> _sendMessage(String message) async {
-    await Future.delayed(Duration(milliseconds: 500)); // Эмуляция задержки
+    await Future.delayed(Duration(milliseconds: 500));
     setState(() {
       messages.add(message);
     });
@@ -57,7 +57,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         _sendMessage(text);
                       }
                     },
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Type a message...',
                       border: OutlineInputBorder(),
                     ),
